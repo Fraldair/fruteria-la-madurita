@@ -29,42 +29,14 @@ public class FuncionesArchivos {
     private static String [][]tablaproducto;
     
     
-     public  static void agregarArchivoCliente(Clientes cliente) throws IOException{
-     File file=new File("Clientes.txt");
-     
-        FileWriter fw=new FileWriter(file,true);
-        BufferedWriter bfWriter;
-        bfWriter = new BufferedWriter(fw);
-            bfWriter.write(""); 
-            bfWriter.write(cliente.getNombre()+"-"+cliente.getId()+"-"+cliente.getN_cedula()+"-"+cliente.getDireccion()
-                    +"-"+cliente.getNum_cell()+"-"+"\r\n");
-            bfWriter.close();
-            fw.close();
+     public  static void agregarCliente(Clientes cliente) throws IOException{
+            
     }
   
- public  static void crearArchivoCliente() throws IOException{
-       File file=new File("Cliente.txt");
-        FileWriter fw=new FileWriter(file);
-    }
     
- public static void leerArchivoCliente(){
-    cliente=new ArrayList<>();
-    File file=new File("Clientes.txt");
-     Scanner reader;
-    String line;
-    try{
-    reader=new Scanner(file);
-   
-    while(reader.hasNextLine()){
-    line= reader.nextLine();
-    
-    Scanner delimiter=new Scanner(line);
-    delimiter.useDelimiter("\\s*-\\s*");
-    cliente.add( new Clientes(delimiter.next(),delimiter.next(),delimiter.next(),delimiter.next(),delimiter.next()));
-    }
-    }catch(FileNotFoundException s){
-    System.out.println("fdfd");
-    }
+     public static void leerArchivoCliente(){
+        cliente=new ArrayList<>();
+        
     
     }
     
@@ -86,18 +58,11 @@ public class FuncionesArchivos {
         FileWriter fw=new FileWriter(file);
     }
  
- public static void crearArchivoEmple(Empleado empleado)throws IOException{
-          File arch=new File("Empleado.txt");
-          
-          FileWriter opw= new FileWriter(arch,true);
-          BufferedWriter escribir= new BufferedWriter (opw);
-           escribir.write(empleado.getNombres()+"-"+empleado.getApellidos()+"-"+empleado.getFecha_na()+"-"+empleado.getE_mail()
-           +"-"+empleado.getCedula()+"-"+empleado.getContraseña()+"-"+empleado.getVe_contraseña()+"-"+
-                   empleado.getDireccion()+"-"+empleado.getTelefono()+"-"+empleado.getCelular()+"-"+empleado.getRol()+"-"+"\r\n");
-           escribir.close();
-           opw.close();
+    public static void crearEmpleado(Empleado empleado)throws IOException{
+        
+         
            
-      }
+    }
       
  public static void leerArchivoEmple(){
       empleado= new ArrayList<>();
