@@ -43,74 +43,34 @@ public class FuncionesArchivos {
  public static Clientes buscarCeduCliente(String cedula){
      leerArchivoCliente();
     Clientes info=new Clientes("","","","","");
-    for(Clientes i:cliente){
-       if((i.getN_cedula().trim()).equals(cedula.trim())){
-       info=i;
-       }
-      }
+    
        return info;
     }
     //fin cliente
-      
-//Empleado u Usuario
- public  static void crearArchivoE() throws IOException{
-       File file=new File("Empleado.txt");
-        FileWriter fw=new FileWriter(file);
-    }
- 
+       
     public static void crearEmpleado(Empleado empleado)throws IOException{
         
          
            
     }
       
- public static void leerArchivoEmple(){
-      empleado= new ArrayList<>();
-     // Empleado emple=new Empleado("","","","","","","","","","");
-       File archivoem= new File ("Empleado.txt");
-       Scanner scan;
-       String linea;
-      try{ 
-       scan= new Scanner (archivoem);
-       
-       while(scan.hasNextLine()){
-           linea= scan.nextLine();
-           
-           Scanner delimitador=new Scanner(linea);
-           delimitador.useDelimiter("\\s*-\\s*");
-           empleado.add(new Empleado(delimitador.next(),delimitador.next(),delimitador.next(),delimitador.next()
-                   ,delimitador.next(),delimitador.next(),delimitador.next(),delimitador.next(),
-                   delimitador.next(),delimitador.next(),delimitador.next()));
-
-           
-       } }catch(FileNotFoundException s){
-    System.out.println("fdfd");
-    }
+    public static void leerArchivoEmple(){
+     
       
-      }
+    }
  
  public static boolean buscaUsuario(String cedula, String pass) throws IOException{
- leerArchivoEmple();
- boolean ot=false;
- //Empleado usuario=new Empleado("","","","","","","","","","");
- for (Empleado usu:empleado){
-    if (usu.getCedula().trim().equals(cedula.trim()) && usu.getContraseña().trim().equals(pass.trim())){
-    ot= true;
-    }
- }
- return ot;
+
+  boolean ot=false;
+  return ot;
  }
  
  public static boolean buscaUsuario2(String cedula, String email) throws IOException{
- leerArchivoEmple();
- boolean ot=false;
- //Empleado usuario=new Empleado("","","","","","","","","","");
- for (Empleado usu:empleado){
-    if (usu.getCedula().trim().equals(cedula.trim()) || usu.getE_mail().trim().equals(email.trim())){
-    ot= true;
-    }
- }
- return ot;
+ 
+  boolean ot=false;
+ 
+ 
+  return ot;
  }
       
       //fin empleado
