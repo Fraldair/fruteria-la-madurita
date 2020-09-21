@@ -37,7 +37,7 @@ public class Conexion {
         
         return result;
     }
-<<<<<<< HEAD
+
     
     public static void main(String a[]) throws ClassNotFoundException, SQLException{
     
